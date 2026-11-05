@@ -6,143 +6,313 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1">
   <meta name="description"
-        content="Aprende inteligencia artificial con Campus IA.">
-  <title>Campus IA | Aprende IA</title>
+        content="Campus IA Studio: historias animadas
+        originales de misterio, fantasía y ciencia ficción.">
+  <title>Campus IA Studio | Historias animadas</title>
+
   <style>
+    :root {
+      --fondo: #090f20;
+      --panel: #14213d;
+      --texto: #f4f7ff;
+      --suave: #b8c5dd;
+      --acento: #62d9ee;
+    }
+
     * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f7fb;
-      color: #17233c;
+      background: var(--fondo);
+      color: var(--texto);
       line-height: 1.6;
     }
+
+    a { color: inherit; }
+
     header {
-      background: #102343;
-      color: white;
-      padding: 18px 8%;
+      background: #101a32;
+      padding: 20px 7%;
     }
+
     nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 16px;
     }
-    nav a {
-      color: white;
+
+    .marca {
+      color: var(--acento);
+      font-size: 22px;
+      font-weight: bold;
       text-decoration: none;
-      margin-right: 14px;
     }
+
+    .enlaces {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .enlaces a {
+      text-decoration: none;
+      font-size: 14px;
+    }
+
     .hero {
-      background: linear-gradient(135deg, #102343, #175b8f);
-      color: white;
+      padding: 100px 20px;
       text-align: center;
-      padding: 85px 20px;
+      background: linear-gradient(
+        135deg, #102347, #321d59, #0a1228
+      );
     }
-    .hero h1 {
-      font-size: clamp(30px, 5vw, 48px);
-      max-width: 800px;
-      margin: auto;
+
+    .etiqueta {
+      color: var(--acento);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: bold;
+      font-size: 13px;
     }
-    .hero p { max-width: 600px; margin: 20px auto; }
+
+    h1 {
+      font-size: clamp(34px, 6vw, 62px);
+      line-height: 1.15;
+      max-width: 850px;
+      margin: 18px auto;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto 30px;
+      color: #d8e2f5;
+      font-size: 18px;
+    }
+
     .boton {
       display: inline-block;
-      padding: 12px 22px;
-      border-radius: 8px;
-      background: #42d5e8;
-      color: #102343;
+      background: var(--acento);
+      color: #071425;
       text-decoration: none;
+      padding: 13px 24px;
+      border-radius: 9px;
       font-weight: bold;
     }
+
     section {
-      max-width: 1050px;
+      max-width: 1100px;
       margin: auto;
-      padding: 55px 20px;
+      padding: 65px 20px;
     }
+
+    h2 { font-size: 30px; }
+
+    .subtitulo {
+      color: var(--suave);
+      max-width: 700px;
+    }
+
     .tarjetas {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      margin-top: 28px;
     }
+
     .tarjeta {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px #10234312;
+      background: var(--panel);
+      border: 1px solid #2a3b5d;
+      border-radius: 16px;
+      overflow: hidden;
     }
+
+    .portada {
+      min-height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 65px;
+    }
+
+    .robot {
+      background: linear-gradient(135deg, #143e73, #503581);
+    }
+
+    .estrella {
+      background: linear-gradient(135deg, #532a74, #d27765);
+    }
+
+    .nave {
+      background: linear-gradient(135deg, #11334a, #1a7c83);
+    }
+
+    .contenido { padding: 22px; }
+
+    .contenido h3 { margin-top: 0; }
+
+    .contenido p { color: var(--suave); }
+
+    .estado {
+      display: inline-block;
+      color: var(--acento);
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .destacado {
+      background: #14213d;
+      border: 1px solid #304465;
+      border-radius: 16px;
+      padding: 35px;
+      margin-top: 25px;
+    }
+
+    .redes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .red {
+      background: #233655;
+      padding: 12px 20px;
+      border-radius: 8px;
+      color: #d4e1f2;
+    }
+
     footer {
-      background: #102343;
-      color: white;
+      background: #060b16;
       text-align: center;
-      padding: 25px;
+      padding: 32px 20px;
+      color: var(--suave);
+    }
+
+    @media (max-width: 600px) {
+      nav { flex-direction: column; }
+      .hero { padding: 70px 18px; }
+      section { padding: 45px 18px; }
     }
   </style>
 </head>
+
 <body>
   <header>
     <nav aria-label="Navegación principal">
-      <strong>Campus IA</strong>
-      <div>
-        <a href="#inicio">Inicio</a>
-        <a href="#aprende">Aprende IA</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#contacto">Contacto</a>
+      <a class="marca" href="#inicio">Campus IA Studio</a>
+      <div class="enlaces">
+        <a href="#historias">Historias</a>
+        <a href="#universo">Nuestro universo</a>
+        <a href="#redes">Redes sociales</a>
       </div>
     </nav>
   </header>
 
   <main>
     <div class="hero" id="inicio">
-      <h1>Descubre el poder de la Inteligencia Artificial</h1>
+      <div class="etiqueta">Historias animadas originales</div>
+
+      <h1>Historias imposibles. Emociones reales.</h1>
+
       <p>
-        Aprende, experimenta y transforma ideas
-        en proyectos digitales con IA.
+        Explora mundos extraordinarios, robots que sueñan,
+        viajes imposibles y misterios que despiertan
+        tu imaginación.
       </p>
-      <a class="boton" href="#aprende">
-        Comienza a explorar
+
+      <a class="boton" href="#historias">
+        Descubre nuestras historias
       </a>
     </div>
 
-    <section id="aprende">
-      <h2>Aprende Inteligencia Artificial</h2>
-      <p>Conoce nuestras futuras áreas de aprendizaje.</p>
+    <section id="historias">
+      <h2>Próximas historias</h2>
+      <p class="subtitulo">
+        Estamos creando nuestras primeras aventuras.
+        Pronto podrás disfrutarlas en nuestros canales.
+      </p>
+
       <div class="tarjetas">
         <article class="tarjeta">
-          <h3>Fundamentos de IA</h3>
-          <p>Conceptos esenciales explicados fácilmente.</p>
+          <div class="portada robot" aria-hidden="true">🤖</div>
+          <div class="contenido">
+            <span class="estado">En producción</span>
+            <h3>El robot que aprendió a soñar</h3>
+            <p>
+              Un pequeño robot descubre un misterio
+              escondido en sus propios sueños.
+            </p>
+          </div>
         </article>
+
         <article class="tarjeta">
-          <h3>Herramientas digitales</h3>
-          <p>Aplicaciones prácticas para la vida diaria.</p>
+          <div class="portada estrella" aria-hidden="true">🌟</div>
+          <div class="contenido">
+            <span class="estado">Próximamente</span>
+            <h3>La niña que encontró una estrella</h3>
+            <p>
+              Una estrella perdida llega a la Tierra
+              y cambia la vida de una niña.
+            </p>
+          </div>
         </article>
+
         <article class="tarjeta">
-          <h3>Automatización</h3>
-          <p>Ideas para optimizar tareas y procesos.</p>
+          <div class="portada nave" aria-hidden="true">🚀</div>
+          <div class="contenido">
+            <span class="estado">Próximamente</span>
+            <h3>El último mensaje de la Tierra</h3>
+            <p>
+              Una señal misteriosa atraviesa el espacio
+              y revela un secreto inesperado.
+            </p>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="proyectos">
-      <h2>Proyectos de Campus IA</h2>
-      <p>
-        Próximamente compartiremos proyectos,
-        demostraciones y recursos prácticos.
-      </p>
+    <section id="universo">
+      <h2>Bienvenido a nuestro universo</h2>
+
+      <div class="destacado">
+        <h3>La imaginación no tiene límites</h3>
+        <p>
+          Campus IA Studio crea relatos originales
+          de fantasía, ciencia ficción y misterio.
+        </p>
+        <p>
+          Combinamos creatividad humana y herramientas
+          digitales para dar vida a personajes,
+          aventuras y mundos extraordinarios.
+        </p>
+      </div>
     </section>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>
-        Estamos preparando nuestros canales de contacto.
-        ¡Vuelve pronto!
+    <section id="redes">
+      <h2>Síguenos en nuestras aventuras</h2>
+      <p class="subtitulo">
+        Estamos preparando nuestros canales oficiales.
+        Muy pronto compartiremos nuestros primeros episodios.
       </p>
+
+      <div class="redes">
+        <span class="red">YouTube · Próximamente</span>
+        <span class="red">Instagram · Próximamente</span>
+        <span class="red">Facebook · Próximamente</span>
+        <span class="red">TikTok · Próximamente</span>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 Campus IA</p>
+    <p>© 2026 Campus IA Studio</p>
+    <p>Historias originales creadas para imaginar.</p>
   </footer>
 </body>
 </html>
